@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[80rem] mx-auto p-[1rem] lg:p-[1.5rem];
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block py-[.6rem] px-[2.5rem];
+    }
+
+    .orange{
+        @apply bg-primaryOrange text-light text-[1.2rem] font-bold;
+    }
+
+    .orange:hover{
+        @apply bg-asul;
+    }
+}
+
+@layer components{
+
+    .header{
+        @apply bg-light relative;
+    }
+
+    .header__wrapper{
+        @apply flex justify-between items-center;
+    }
+
+    .blur{
+		@apply h-[100vh] w-[50%] bg-blur absolute right-[100rem] top-0 z-[1] transition-[.5s] ease-in overflow-hidden lg:hidden;
+	}
+
+    .blur.open{
+		@apply left-0 transition-[.5s] ease-in overflow-visible;
+	}
+
+    .header__nav{
+        @apply z-[1] absolute bg-light right-0 top-0 w-0 h-[100vh] overflow-hidden transition-[.5s] ease-in lg:hidden; 
+    } 
+
+    .header__nav.open{
+        @apply overflow-visible w-[50%] transition-[.5s] ease-in;
+    }
+
+    .header__nav ul{
+        @apply mt-[7rem] p-[1.5rem];
+    }
+
+    .header__nav ul li{
+        @apply text-[1.5rem] text-darkGBlue font-medium mt-[1rem];
+    }
+
+    .header__nav ul li:hover{
+        @apply text-primaryOrange;
+    }
+
+    .header__nav__desktop{
+        @apply hidden lg:block;
+    }
+
+    .header__nav__desktop ul{
+        @apply flex items-center gap-[3rem];
+    }
+
+    .header__nav__desktop ul li{
+        @apply text-[1.2rem] text-darkGBlue font-medium hover:text-primaryOrange;
+    }
+
+    .toggle__menu{
+        @apply cursor-pointer lg:hidden;
+    }
+
+    .toggle__menu.open{
+        @apply absolute top-[2rem] right-[1.5rem] z-[99];
+    }
+    
+    .toggle__menu span{
+        @apply  block h-[.2rem] w-[2.8rem] rounded-full bg-asul;
+    } 
+
+    .toggle__menu span:nth-child(2){
+        @apply my-[.3rem];
+    }
+
+    .toggle__menu.open span:first-child {
+		@apply translate-x-0 translate-y-[8px] rotate-[40deg] transition-[.5s] ease-in;
+	}
+
+	.toggle__menu.open span:nth-child(2) {
+		@apply opacity-0 transition-[.5s] ease-in;
+	}
+	.toggle__menu.open span:last-child {
+		@apply translate-x-0 translate-y-[-8px] rotate-[-40deg] transition-[.5s] ease-in;
+	}
+
+
+    /* PAGE  */
+
+    #img-desktop{
+        @apply hidden lg:flex;
+    }
+
+    #img-mobile{
+        @apply lg:hidden lg:bg-cover lg:bg-no-repeat;
+    }
+
+    .page__wrapper{
+        @apply lg:grid lg:grid-cols-[_2.5fr,_1.5fr] lg:gap-[2rem];
+    }
+
+    .page__right__bottom{
+        @apply lg:flex lg:gap-[2rem] lg:mt-[1rem];
+    }
+
+    .page__right__bottom__title h1{
+        @apply text-[3.5rem] leading-[1.2] font-bold text-asul mt-[1rem] w-[25rem] lg:w-[20rem];
+    } 
+
+    .page__right__bottom__title h1 span{
+        @apply block;
+    }
+
+    .page__right__bottom__content p{
+        @apply text-darkGBlue text-[1.1rem] font-medium my-[1rem] pb-[1.3rem] ;
+    }
+
+    .page__left{
+        @apply bg-asul mt-[5rem] lg:mt-0;
+    }
+
+    .page__left h2{
+        @apply text-primaryYellow text-[2.5rem] font-bold pt-[1.5rem] pl-[1.5rem]
+    }
+
+    .page__left__items{
+        @apply mx-[1.5rem] py-[1.5rem] border-solid border-b-[1px] border-grayishBlue;
+    }
+
+    .page__left__items:last-child{
+        @apply border-none;
+    }
+
+    .page__left__items a{
+        @apply text-light text-[1.8rem] font-bold mb-[.5rem];
+    }
+
+    .page__left__items a:hover{
+        @apply text-primaryYellow;
+    }
+
+    .page__left__items p{
+        @apply text-grayishBlue text-[1.3rem] w-[25rem] font-light;
+    }
+
+    /* FEATURES  */
+
+    .features{
+        @apply pb-[5rem];
+    }
+
+    .features__wrapper{
+        @apply lg:flex lg:gap-[1rem];
+    }
+
+    .feature__card{
+        @apply flex items-start gap-[1.5rem] mt-[3rem] lg:w-[30rem];
+    }
+
+    .feature__card__img img{
+        @apply max-w-[10rem] object-cover lg:max-w-[8rem];
+    }
+
+    .feature__card__content h3{
+        @apply text-[3rem] font-bold text-grayishBlue mb-[.5rem] lg:text-[2rem] lg:mb-[1rem];
+    }
+
+    .feature__card__content a{
+        @apply text-[1.5rem] font-bold text-asul lg:text-[1.2rem];
+    }
+
+    .feature__card__content a:hover{
+        @apply text-primaryOrange;
+    }
+
+    .feature__card__content p{
+        @apply text-darkGBlue text-[1.3rem] mt-[1.5rem] lg:text-[1.1rem] lg:mt-[1.2rem];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
